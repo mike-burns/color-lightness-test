@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'middleman'
+gem 'middleman-blog'
+gem 'middleman-neat'
+gem 'slim'
+gem 'builder'
+gem 'middleman-syntax'
+gem 'middleman-livereload'
+gem 'middleman-minify-html'
+gem 'middleman-imageoptim'
+gem 'middleman-gh-pages'
