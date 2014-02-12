@@ -1,0 +1,89 @@
+//= require normalize-css/normalize
+//= require colpick/css/_colpick
+
+@import 'bourbon';
+$max-width: em(900);
+@import 'neat';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+$open: 'Open Sans', Helvetica, Arial, sans-serif;
+$ebony-clay: rgba(38, 44, 58, 1.0);
+
+
+main {
+  font-family: $open;
+}
+
+header {
+  background-color: $ebony-clay;
+  color: #FFF;
+
+  h1 {
+    border-bottom: 1px solid rgba(#FFF, .1);
+    font-size: 3em;
+    font-weight: 300;
+    padding-bottom: .5em;
+  }
+
+  .content {
+    @include outer-container();
+    width: $max-width;
+    padding-bottom: 2em;
+  }
+
+  .widget {
+    @include span-columns(3);
+  }
+
+  .explanation {
+    @include span-columns(9);
+    color: lighten($ebony-clay, 45%);
+    font-size: 1.2em;
+    font-weight: 300;
+    padding-left: 2em;
+    position: relative;
+    padding-top: 60px;
+
+    &:before {
+      @include size(20px);
+      @include transform(rotate(45deg));
+      border-bottom: 1px solid lighten($ebony-clay, 30%);
+      border-left: 1px solid lighten($ebony-clay, 30%);
+      content: '';
+      display: block;
+      left: 5px;
+      position: absolute;
+      top: 75px;
+    }
+  }
+}
+
+.previews {
+  @include outer-container();
+  padding: 0;
+  width: $max-width;
+
+  li {
+    @include span-columns(4);
+    @include omega(4n);
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 2px rgba(black, 0.2);
+  }
+}
+
+footer {
+  @include outer-container();
+  border-top: 1px solid #EEE;
+  color: lighten($ebony-clay, 50%);
+  padding: 1em;
+  text-align: center;
+  width: $max-width;
+
+  a {
+    color: lighten($ebony-clay, 30%);
+  }
+}
