@@ -77,11 +77,11 @@ configure :build do
   activate :relative_assets
   activate :directory_indexes
   activate :asset_hash
+  set :relative_links, true
 
   # Ensmallen assets
   activate :minify_html, remove_input_attributes: false
   activate :minify_css
   activate :minify_javascript
-#   activate :image_optim
   activate :gzip, exts: %w(.js .css .html .htm .svg .ttf .otf .woff .eot)
 end
