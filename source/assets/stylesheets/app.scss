@@ -4,6 +4,7 @@
 @import 'bourbon';
 $max-width: em(900);
 @import 'neat';
+@import 'partials/tooltip';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 $open: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -73,6 +74,11 @@ header {
     margin-bottom: 1em;
     box-shadow: 0 0 2px rgba(black, 0.2);
   }
+
+}
+
+.functions img {
+  display: none;
 }
 
 footer {
