@@ -10,7 +10,11 @@ main
       .picker
         .widget
         .explanation
-          | Select a color from the picker in order to determine whether it's considered light or dark using the different algorithms below. Text color will be opposite of the lightness test result.
+          p Select a color from the picker in order to determine whether it's considered light or dark using the different algorithms below. Text color will be opposite of the lightness test result.
+          p You can also set the lightness treshold value for different results:
+          form oninput="threshold.value=thresholdRange.value"
+            input type="range" id="thresholdRange" name="thresholdRange" min="0.4" max="0.8" step="0.1" value="0.5"
+            output name="threshold" for="thresholdRange" 0.5
   section.previews
     ul.previews
       h3 Non-weighted

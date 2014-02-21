@@ -42,8 +42,8 @@ header {
     font-size: 1.2em;
     font-weight: 300;
     padding-left: 2em;
-    position: relative;
     padding-top: 60px;
+    position: relative;
 
     &:before {
       @include size(20px);
